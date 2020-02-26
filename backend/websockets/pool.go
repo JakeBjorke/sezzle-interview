@@ -35,18 +35,18 @@ func (pool *Pool) Start() {
 			pool.Clients[client] = true
 			log.Println("Size of connection pool: ", len(pool.Clients))
 			//todo the requirements do not say that we have to populate it initally but could easily do it here...
+			// history := pool.MsgLog.GetLog()
+			// client.Conn.WriteJSON(history)
 			break
 		case client := <-pool.Unregister:
 			delete(pool.Clients, client)
 			log.Println("Size of connection pool:  ", len(pool.Clients))
 			break
 		case message := <-pool.Broadcast:
-			//todo come back and make sure that we limit this to 10 and deal with tossing out the old ones.
 			log.Println("Sending expression history to all clients in pool")
 			pool.MsgLog.Push(message)
 			history := pool.MsgLog.GetLog()
-			log.Printf("history:  %v\n\r", history)
-			for client, _ := range pool.Clients {
+			for client := range pool.Clients {
 				if err := client.Conn.WriteJSON(history); err != nil {
 					log.Println(err)
 					return

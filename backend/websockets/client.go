@@ -9,6 +9,7 @@ import (
 	"github.com/jakebjorke/sezzle-interview/models"
 )
 
+//Client is a websocket client
 type Client struct {
 	ID   string
 	Conn *websocket.Conn

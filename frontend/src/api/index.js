@@ -1,5 +1,5 @@
 //var socket = new WebSocket("ws://localhost:8080/ws");
-var socket = new WebSocket("ws://157.245.242.196/ws");
+var socket = new WebSocket("ws://sezzle-interview.azurewebsites.net/ws");
 
 let connect = (cb) => {
     console.log("Attempting connection....");

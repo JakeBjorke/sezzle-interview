@@ -21,7 +21,7 @@ class ExpressionInput extends Component {
         console.log(this.state);
         var req = {Value:this.state.value};
         // fetch('http://localhost:8080/expression/', {
-        fetch('http://157.245.242.196/expression/', {
+        fetch('http://sezzle-interview.azurewebsites.net/expression/', {
             method: 'POST',
             headers: {
                 'Content-Type': `application/json`,

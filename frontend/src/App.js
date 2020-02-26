@@ -21,7 +21,8 @@ class App extends Component {
         we need to parse here and just send the list, just wanted to
         start seeing data here which is why it is done this way.
         */
-        statementHistory: [...prevState.statementHistory, msg.data]
+        // statementHistory: [msg.data]
+        statementHistory: JSON.parse(msg.data)
       }))
       console.log("message", this.state);
     });

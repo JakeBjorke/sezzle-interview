@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sezzle-interview/static/css/main.cdca6ce7.chunk.css",
+    "main.js": "/sezzle-interview/static/js/main.7f479630.chunk.js",
+    "main.js.map": "/sezzle-interview/static/js/main.7f479630.chunk.js.map",
+    "runtime-main.js": "/sezzle-interview/static/js/runtime-main.0dca58e2.js",
+    "runtime-main.js.map": "/sezzle-interview/static/js/runtime-main.0dca58e2.js.map",
+    "static/js/2.3b34ba16.chunk.js": "/sezzle-interview/static/js/2.3b34ba16.chunk.js",
+    "static/js/2.3b34ba16.chunk.js.map": "/sezzle-interview/static/js/2.3b34ba16.chunk.js.map",
+    "index.html": "/sezzle-interview/index.html",
+    "precache-manifest.9c187593ae43bcae7cac9782f999cb2c.js": "/sezzle-interview/precache-manifest.9c187593ae43bcae7cac9782f999cb2c.js",
+    "service-worker.js": "/sezzle-interview/service-worker.js",
+    "static/css/main.cdca6ce7.chunk.css.map": "/sezzle-interview/static/css/main.cdca6ce7.chunk.css.map",
+    "static/js/2.3b34ba16.chunk.js.LICENSE.txt": "/sezzle-interview/static/js/2.3b34ba16.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0dca58e2.js",
+    "static/js/2.3b34ba16.chunk.js",
+    "static/css/main.cdca6ce7.chunk.css",
+    "static/js/main.7f479630.chunk.js"
+  ]
+}

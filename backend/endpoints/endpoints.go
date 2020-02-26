@@ -11,10 +11,10 @@ import (
 	"github.com/jakebjorke/sezzle-interview/websockets"
 )
 
-var broadcastChan chan websockets.Message
+var broadcastChan chan models.Message
 
 //SetBroadcastChan channel to broadcast good values to websockets
-func SetBroadcastChan(c chan websockets.Message) {
+func SetBroadcastChan(c chan models.Message) {
 	broadcastChan = c
 }
 
@@ -47,7 +47,7 @@ func Expression(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 
 	if broadcastChan != nil {
-		broadcastChan <- websockets.Message{Type: 2, Body: response.Statement}
+		broadcastChan <- models.Message{Type: 2, Body: response.Statement}
 	}
 }
 

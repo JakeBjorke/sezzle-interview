@@ -5,17 +5,14 @@ import (
 	"log"
 
 	"github.com/gorilla/websocket"
+
+	"github.com/jakebjorke/sezzle-interview/models"
 )
 
 type Client struct {
 	ID   string
 	Conn *websocket.Conn
 	Pool *Pool
-}
-
-type Message struct {
-	Type int    `json:"type"`
-	Body string `json:"body`
 }
 
 func (c *Client) Read() {
@@ -31,7 +28,7 @@ func (c *Client) Read() {
 			return
 		}
 
-		message := Message{Type: messageType, Body: string(p)}
+		message := models.Message{Type: messageType, Body: string(p)}
 		c.Pool.Broadcast <- message
 		fmt.Printf("message received: %+v\n", message)
 	}
